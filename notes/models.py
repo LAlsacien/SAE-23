@@ -123,8 +123,8 @@ class DjangoSession(models.Model):
 
 
 class Enseignants(models.Model):
-    nom = models.CharField(max_length=255)
-    prenom = models.CharField(max_length=255)
+    nom = models.CharField(max_length=255, blank=True, null=True)
+    prenom = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -134,71 +134,67 @@ class Enseignants(models.Model):
         return self.nom + " " + self.prenom
 
 
-class Etudiant(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    numeroetudiant = models.BigIntegerField(db_column='numeroEtudiant')  # Field name made lowercase.
-    nom = models.CharField(max_length=255)
-    prenom = models.CharField(max_length=255)
-    groupe = models.IntegerField()
-    photo = models.TextField()
-    email = models.CharField(max_length=255)
+class Etudiants(models.Model):
+    numeroetudiant = models.BigIntegerField(db_column='numeroEtudiant', blank=True, null=True)  # Field name made lowercase.
+    nom = models.CharField(max_length=255, blank=True, null=True)
+    prenom = models.CharField(max_length=255, blank=True, null=True)
+    groupe = models.BigIntegerField(blank=True, null=True)
+    photo = models.TextField(blank=True, null=True)
+    email = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'etudiant'
+        db_table = 'etudiants'
 
     def __str__(self):
         return self.nom + " " + self.prenom
 
 
 class Examens(models.Model):
-    id = models.IntegerField(primary_key=True)
-    titre = models.CharField(max_length=255)
-    date = models.DateField()
+    titre = models.CharField(max_length=255, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
     coefficient = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'examens'
-
+    
     def __str__(self):
-        return self.titre 
+        return self.titre
 
 
 class Notes(models.Model):
-    examen = models.ForeignKey(Examens, models.DO_NOTHING, db_column='examen')
-    appreciation = models.TextField()
-    note = models.IntegerField()
-    etudiant = models.ForeignKey(Etudiant, models.DO_NOTHING, db_column='etudiant')
+    examens = models.ForeignKey(Examens, models.DO_NOTHING, db_column='examens', blank=True, null=True)
+    etudiant = models.ForeignKey(Etudiants, models.DO_NOTHING, db_column='etudiant', blank=True, null=True)
+    note = models.BigIntegerField(blank=True, null=True)
+    appreciation = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'notes'
-
+    
     def __str__(self):
-        return "Note de " + self.etudiant.nom + " " + self.etudiant.prenom + " à l'épreuve de " + self.examen.titre
-
+        return "Note de " + self.etudiant.nom + " " + self.etudiant.prenom + " à l'examen de " + self.examens.titre
 
 
 class Ressourcesue(models.Model):
-    ue = models.ForeignKey('Ue', models.DO_NOTHING, db_column='ue')
-    nom = models.CharField(max_length=255)
-    descriptif = models.TextField()
-    coefficient = models.IntegerField()
-    coderessource = models.BigIntegerField(db_column='codeRessource', blank=True, null=True)  # Field name made lowercase.
+    coderessource = models.IntegerField(db_column='codeRessource', blank=True, null=True)  # Field name made lowercase.
+    ue = models.ForeignKey('Ue', models.DO_NOTHING, db_column='nom', blank=True, null=True)
+    descriptif = models.CharField(max_length=255, blank=True, null=True)
+    coefficient = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'ressourcesUe'
 
     def __str__(self):
-        return self.nom 
+        return self.coderessource
 
 
 class Ue(models.Model):
-    code = models.IntegerField()
-    nom = models.CharField(max_length=255)
-    semestre = models.IntegerField()
+    code = models.IntegerField(blank=True, null=True)
+    nom = models.CharField(max_length=255, blank=True, null=True)
+    semestre = models.IntegerField(blank=True, null=True)
     ects = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -206,4 +202,4 @@ class Ue(models.Model):
         db_table = 'ue'
 
     def __str__(self):
-        return self.nom + "" 
+        return self.nom

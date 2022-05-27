@@ -1,17 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-# from .forms import EtudiantForm
-# from .models import Etudiant
+from .forms import EtudiantsForm
+from .models import Etudiants
 
-def index(request):
+def index(request): 
     submitted = False
     if request.method == "POST":
-        form = EtudiantForm(request.POST)
+        form = EtudiantsForm(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/")
     else: 
-        form = EtudiantForm()
+        form = EtudiantsForm()
         if 'submitted' in request.GET:
             submitted = True
     

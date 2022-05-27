@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'webgrade.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'WebGrade', 
+        'NAME': 'grade', 
         'USER': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
