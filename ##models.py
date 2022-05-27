@@ -130,9 +130,6 @@ class Enseignants(models.Model):
         managed = False
         db_table = 'enseignants'
 
-    def __str__(self):
-        return self.nom + " " + self.prenom
-
 
 class Etudiant(models.Model):
     id = models.BigIntegerField(primary_key=True)
@@ -147,8 +144,7 @@ class Etudiant(models.Model):
         managed = False
         db_table = 'etudiant'
 
-    def __str__(self):
-        return self.nom + " " + self.prenom
+   
 
 
 class Examens(models.Model):
@@ -161,38 +157,28 @@ class Examens(models.Model):
         managed = False
         db_table = 'examens'
 
-    def __str__(self):
-        return self.titre 
-
 
 class Notes(models.Model):
-    examen = models.ForeignKey(Examens, models.DO_NOTHING, db_column='examen')
+    examen = models.CharField(max_length=255)
+    etudiant = models.CharField(max_length=255)
     appreciation = models.TextField()
-    note = models.IntegerField()
-    etudiant = models.ForeignKey(Etudiant, models.DO_NOTHING, db_column='etudiant')
+    note = models.ForeignKey(Examens, models.DO_NOTHING, db_column='note')
+    etudiantid = models.ForeignKey(Etudiant, models.DO_NOTHING, db_column='etudiantid')
 
     class Meta:
         managed = False
         db_table = 'notes'
 
-    def __str__(self):
-        return "Note de " + self.etudiant.nom + " " + self.etudiant.prenom + " à l'épreuve de " + self.examen.titre
-
-
 
 class Ressourcesue(models.Model):
-    ue = models.ForeignKey('Ue', models.DO_NOTHING, db_column='ue')
+    coderessource = models.ForeignKey('Ue', models.DO_NOTHING, db_column='codeRessource')  # Field name made lowercase.
     nom = models.CharField(max_length=255)
     descriptif = models.TextField()
     coefficient = models.IntegerField()
-    coderessource = models.BigIntegerField(db_column='codeRessource', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
         db_table = 'ressourcesUe'
-
-    def __str__(self):
-        return self.nom 
 
 
 class Ue(models.Model):
@@ -204,6 +190,3 @@ class Ue(models.Model):
     class Meta:
         managed = False
         db_table = 'ue'
-
-    def __str__(self):
-        return self.nom + "" 
