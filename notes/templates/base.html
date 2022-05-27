@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<body>
+    <a href="{% url 'ajoutetudiant' %}">ajouter un etudiant</a>
+    <a href="{% url 'ajoutenseignant' %}">ajouter enseignant</a>
+    <a href="{% url 'ajoutexamen' %}">ajouter un examen</a>
+    <a href="{% url 'ajoutnote' %}">ajouter une note</a>
+    <a href="{% url 'ajoutressourceue' %}">ajouter une ressource a un ue</a>
+    <a href="{% url 'ajoutue' %}">ajouter une ue</a>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
