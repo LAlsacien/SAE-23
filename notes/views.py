@@ -7,6 +7,7 @@ from .forms import ExamensForm
 from .forms import EnseignantsForm
 from .forms import RessourcesueForm
 from .models import Etudiants, Notes, Ue, Examens, Ressourcesue, Enseignants
+from . import models 
 
 def ajoutetudiant(request): 
     submitted = False
@@ -98,4 +99,17 @@ def ajoutressourceue(request):
     return render(request, 'ajoutressourceue.html', {'form': form})
 
 
+def notes(request):
+    notes = Notes.objects.all()
+    return render(request, 'notes.html', {'notes': notes})
 
+
+def etudiants(request):
+    notes = Notes.objects.all()
+    etudiants = Etudiants.objects.all()
+    return render(request, 'etudiants.html', {'etudiants': etudiants, 'notes': notes})
+
+
+def affichenote(request, notes_etudiant):
+    notes = models.Notes.objects.get(pk=notes_etudiant)
+    return render(request, 'affichenote.html', {'notes': notes})

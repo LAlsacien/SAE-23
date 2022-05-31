@@ -9,4 +9,7 @@ urlpatterns = [
     path('ajoutue/',views.ajoutue, name='ajoutue'),
     path('ajoutexamen/',views.ajoutexamen, name='ajoutexamen'),
     path('ajoutressourceue/',views.ajoutressourceue, name='ajoutressourceue'),
+    path('notes/', views.notes, name='notes'),
+    path('etudiants/', views.etudiants, name='etudiants'),
+    path('affichenote/<notes_etudiant>/', views.affichenote, name='affiche-note'),
 ]

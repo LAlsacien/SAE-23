@@ -141,7 +141,7 @@ class Etudiants(models.Model):
     groupe = models.BigIntegerField(blank=True, null=True)
     photo = models.TextField(blank=True, null=True)
     email = models.CharField(max_length=255, blank=True, null=True)
-
+    
     class Meta:
         managed = False
         db_table = 'etudiants'
