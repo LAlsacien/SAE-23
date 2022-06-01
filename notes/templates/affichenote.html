@@ -1,41 +1,39 @@
-{% extends 'base.html' %}
-{% block content %}
-<br>
-{{notes.etudiant}}
+{% extends 'base.html' %} {% block content %}
+<br />
 
+{% for notes in notes %} 
+{{notes.etudiant.prenom}} 
+{% endfor %} 
 
+{% for notes in notes %}
 
 <div class="container">
-    
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title"> </h4>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table">
-                <thead class="text-primary">
-                  <th>Examen</th>
-                  <th>Note</th>
-                </thead>
-                <tbody>
-                  <tr> 
-                    <td> {{notes.examens}} </td>
-                    <td> {{notes.note}}</td>
-                  </tr> 
-                </tbody>
-              </table>
-            </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"></h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th>Examen</th>
+                <th>Note</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{notes.examens}}</td>
+                  <td>{{notes.note}}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-       
       </div>
     </div>
-   
   </div>
-
-
+</div>
+{% endfor %} 
 
 {% endblock %}

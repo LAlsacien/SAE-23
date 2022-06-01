@@ -11,5 +11,5 @@ urlpatterns = [
     path('ajoutressourceue/',views.ajoutressourceue, name='ajoutressourceue'),
     path('notes/', views.notes, name='notes'),
     path('etudiants/', views.etudiants, name='etudiants'),
-    path('affichenote/<notes_etudiant>/', views.affichenote, name='affiche-note'),
+    path('affichenote/<int:id>/', views.affichenote, name='affichenote'),
 ]

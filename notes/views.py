@@ -105,11 +105,9 @@ def notes(request):
 
 
 def etudiants(request):
-    notes = Notes.objects.all()
     etudiants = Etudiants.objects.all()
-    return render(request, 'etudiants.html', {'etudiants': etudiants, 'notes': notes})
-
-
-def affichenote(request, notes_etudiant):
-    notes = models.Notes.objects.get(pk=notes_etudiant)
+    return render(request, 'etudiants.html', {'etudiants': etudiants})
+  
+def affichenote(request, id):
+    notes = Notes.objects.filter(etudiant__id=id)
     return render(request, 'affichenote.html', {'notes': notes})

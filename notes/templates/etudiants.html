@@ -1,24 +1,26 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="row">
-  {% for Etudiants in etudiants %}
+  {% for etudiant in etudiants %}
   <div class="col-sm-4">
     <div class="card">
       <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">{{ Etudiants.nom }} {{ Etudiants.prenom }} </h5>
+        <h5 class="card-title">{{ etudiant.nom }} {{ etudiant.prenom }} </h5>
         <p class="card-text">
-          E-mail : {{ Etudiants.email }} <br>
-          Numéro étudiant : {{ Etudiants.numeroetudiant }} <br>
-          Groupe : {{ Etudiants.groupe }} <br>
+          E-mail : {{ etudiant.email }} <br>
+          Numéro étudiant : {{ etudiant.numeroetudiant }} <br>
+          Groupe : {{ etudiant.groupe }} <br>
         </p> 
-        {% for Notes in notes %}
-        <a href="../affichenote/{{notes.etudiant}}" class="btn btn-primary">Voir les notes</a>
-        {% endfor %}
+       
+        <a href="{% url 'affichenote' etudiant.id %}" class="btn btn-primary">Voir les notes</a>
+
       </div>
     </div>
   </div>
   {% endfor %}
 </div>
+    
+
 
 {% endblock %}
