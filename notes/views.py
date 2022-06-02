@@ -9,10 +9,15 @@ from .forms import RessourcesueForm
 from .models import Etudiants, Notes, Ue, Examens, Ressourcesue, Enseignants
 from . import models 
 
+
+
+def index(request):
+    return render(request, 'index.html')
+
 def ajoutetudiant(request): 
     submitted = False
     if request.method == "POST":
-        form = EtudiantsForm(request.POST)
+        form = EtudiantsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("../ajoutetudiant/")

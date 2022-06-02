@@ -1,39 +1,38 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '/css/affichee.css' %}"
+  />
+</head>
+
 <br />
 
-{% for notes in notes %} 
-{{notes.etudiant.prenom}} 
-{% endfor %} 
 
-{% for notes in notes %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title"></h4>
-        </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table">
-              <thead class="text-primary">
-                <th>Examen</th>
-                <th>Note</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{{notes.examens}}</td>
-                  <td>{{notes.note}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="tout">
+  {% for notes in notes %} {{notes.etudiant}} {% endfor %}
+
+  <br> <br>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Examens</th>
+        <th scope="col">Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for notes in notes %}
+        <td>{{notes.examens}}</td>
+        <td>{{notes.note}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
-{% endfor %} 
 
 {% endblock %}

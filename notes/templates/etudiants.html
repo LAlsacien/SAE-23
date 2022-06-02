@@ -1,26 +1,72 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% load static %}
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '/css/etudiants.css' %}"
+  />
+</head>
 
-<div class="row">
+<!-- <div class="row">
   {% for etudiant in etudiants %}
   <div class="col-sm-4">
     <div class="card">
       <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">{{ etudiant.nom }} {{ etudiant.prenom }} </h5>
+        <h5 class="card-title">{{ etudiant.nom }} {{ etudiant.prenom }}</h5>
         <p class="card-text">
-          E-mail : {{ etudiant.email }} <br>
-          Numéro étudiant : {{ etudiant.numeroetudiant }} <br>
-          Groupe : {{ etudiant.groupe }} <br>
-        </p> 
-       
-        <a href="{% url 'affichenote' etudiant.id %}" class="btn btn-primary">Voir les notes</a>
+          E-mail : {{ etudiant.email }} <br />
+          Numéro étudiant : {{ etudiant.numeroetudiant }} <br />
+          Groupe : {{ etudiant.groupe }} <br />
+        </p>
 
+        <a href="{% url 'affichenote' etudiant.id %}" class="btn btn-primary"
+          >Voir les notes</a
+        >
       </div>
     </div>
   </div>
   {% endfor %}
-</div>
-    
+</div> -->
 
+<div class="card-body">
+  <div class="basis-member staff">
+    <div class="container">
+      <div class="row">
+        {% for etudiant in etudiants %}
+        <div class="col-lg-3">
+          <div class="card member-box shadow-lg">
+            <span class="shape"></span>
+           
+            <img class="img-thumbnail"src="{{etudiant.photo.url}}">
+
+
+
+            {{etudiant.photo }}
+           
+            
+            <div class="card-body">
+              <h4 class="member-title">{{etudiant.nom}} {{etudiant.prenom}}</h4>
+              <span class="member-degignation"
+                >Numéro étudiant :<strong>
+                  {{etudiant.numeroetudiant}}
+                </strong></span
+              >
+              <br />
+              <span class="member-degignation"
+                >E-mail :<strong> {{etudiant.email}} </strong></span
+              >
+
+              <br />
+
+              <a href="{% url 'affichenote' etudiant.id %}">Voir les notes</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

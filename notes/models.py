@@ -139,9 +139,9 @@ class Etudiants(models.Model):
     nom = models.CharField(max_length=255, blank=True, null=True)
     prenom = models.CharField(max_length=255, blank=True, null=True)
     groupe = models.BigIntegerField(blank=True, null=True)
-    photo = models.TextField(blank=True, null=True)
+    photo = models.ImageField(blank=False, null=False, upload_to='images/')
     email = models.CharField(max_length=255, blank=True, null=True)
-    
+
     class Meta:
         managed = False
         db_table = 'etudiants'

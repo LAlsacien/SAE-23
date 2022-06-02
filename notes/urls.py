@@ -12,4 +12,5 @@ urlpatterns = [
     path('notes/', views.notes, name='notes'),
     path('etudiants/', views.etudiants, name='etudiants'),
     path('affichenote/<int:id>/', views.affichenote, name='affichenote'),
+    path('', views.index, name='index'),
 ]
