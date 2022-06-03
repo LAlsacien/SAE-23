@@ -3,7 +3,7 @@
   <link
     rel="stylesheet"
     type="text/css"
-    href="{% static '/css/etudiants.css' %}"
+    href="{% static '/css/etudiantss.css' %}"
   />
 </head>
 
@@ -37,27 +37,23 @@
         <div class="col-lg-3">
           <div class="card member-box shadow-lg">
             <span class="shape"></span>
-           
-            <img class="img-thumbnail"src="{{etudiant.photo.url}}">
-
-
-
-            {{etudiant.photo }}
-           
-            
+            <div class="image-etudiant">
+            <img
+              class="card-img-top"
+              src="{{etudiant.photo.url}}"
+              alt=""
+            /> 
+          </div>
             <div class="card-body">
               <h4 class="member-title">{{etudiant.nom}} {{etudiant.prenom}}</h4>
               <span class="member-degignation"
                 >Numéro étudiant :<strong>
                   {{etudiant.numeroetudiant}}
-                </strong></span
-              >
-              <br />
-              <span class="member-degignation"
-                >E-mail :<strong> {{etudiant.email}} </strong></span
-              >
-
-              <br />
+                </strong></span>
+              <br/>
+              <span class="member-degignation">E-mail :<strong> {{etudiant.email}} </strong></span> <br>
+              <span class="member-degignation">Groupe :<strong> RT{{etudiant.groupe}} </strong></span>
+              <br/>
 
               <a href="{% url 'affichenote' etudiant.id %}">Voir les notes</a>
             </div>

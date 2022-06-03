@@ -1,0 +1,41 @@
+.basis-member.staff {
+  padding: 4rem 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.basis-member.staff .member-box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.basis-member.staff .member-box .card-body {
+  position: relative;
+  height: 150px;
+}
+.basis-member.staff .member-box .shape {
+  width: 200px;
+  height: 200px;
+  background: var(--primary);
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  right: -100px;
+  transform: rotate(45deg);
+}
+
+.basis-member.staff .member-box .card-img-top {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+  border-bottom: 5px solid var(--primary);
+}
+
+.basis-member.staff .member-box .member-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
