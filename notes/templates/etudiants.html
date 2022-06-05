@@ -3,7 +3,7 @@
   <link
     rel="stylesheet"
     type="text/css"
-    href="{% static '/css/etudiantss.css' %}"
+    href="{% static '/css/etudiantssss.css' %}"
   />
 </head>
 
@@ -28,6 +28,16 @@
   </div>
   {% endfor %}
 </div> -->
+
+
+
+
+<form method=POST action="{% url 'recherche' %}" class="search-wrapper cf">
+  {% csrf_token %}
+  <input type="text" placeholder="rechercher un étudiant" required style="box-shadow: none" name="rechercher">
+  <button type="submit">Rechercher</button>
+</form>
+
 
 <div class="card-body">
   <div class="basis-member staff">

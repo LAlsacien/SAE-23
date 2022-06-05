@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '/css/etudiantss.css' %}"
+  />
+</head>
+
+
+
+{% if rechercher %}
+    <h1>Vous avez recherché {{rechercher}} </h1>
+
+    <div class="card-body">
+        <div class="basis-member staff">
+          <div class="container">
+            <div class="row">
+              {% for etudiant in etudiants %}
+              <div class="col-lg-3">
+                <div class="card member-box shadow-lg">
+                  <span class="shape"></span>
+                  <div class="image-etudiant">
+                  <img
+                    class="card-img-top"
+                    src="{{etudiant.photo.url}}"
+                    alt=""
+                  /> 
+                </div>
+                  <div class="card-body">
+                    <h4 class="member-title">{{etudiant.nom}} {{etudiant.prenom}}</h4>
+                    <span class="member-degignation"
+                      >Numéro étudiant :<strong>
+                        {{etudiant.numeroetudiant}}
+                      </strong></span>
+                    <br/>
+                    <span class="member-degignation">E-mail :<strong> {{etudiant.email}} </strong></span> <br>
+                    <span class="member-degignation">Groupe :<strong> RT{{etudiant.groupe}} </strong></span>
+                    <br/>
+                    <a href="{% url 'affichenote' etudiant.id %}">Voir les notes</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% else %}
+    <h1>Vous n'avez pas recherché...</h1>
+{% endif %}
+
+
+{% endblock %}

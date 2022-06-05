@@ -13,4 +13,5 @@ urlpatterns = [
     path('etudiants/', views.etudiants, name='etudiants'),
     path('affichenote/<int:id>/', views.affichenote, name='affichenote'),
     path('', views.index, name='index'),
+    path('recherche/', views.recherche, name='recherche'),
 ]

@@ -116,3 +116,12 @@ def etudiants(request):
 def affichenote(request, id):
     notes = Notes.objects.filter(etudiant__id=id)
     return render(request, 'affichenote.html', {'notes': notes})
+
+
+def recherche(request):
+    if request.method == "POST":
+        rechercher = request.POST['rechercher']
+        etudiants = Etudiants.objects.filter(prenom__contains=rechercher)
+        return render(request, 'recherche.html', {'rechercher':rechercher, 'etudiants': etudiants})
+    else:
+        return render(request, 'recherche.html')
