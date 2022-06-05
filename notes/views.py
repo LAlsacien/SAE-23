@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from .forms import EtudiantsForm
 from .forms import NotesForm
@@ -125,3 +125,12 @@ def recherche(request):
         return render(request, 'recherche.html', {'rechercher':rechercher, 'etudiants': etudiants})
     else:
         return render(request, 'recherche.html')
+
+
+def editetudiant(request, etudiant_id):
+    etudiant = Etudiants.objects.get(pk=etudiant_id)
+    form = EtudiantsForm(request.POST or None, instance=etudiant)
+    if form.is_valid():
+        form.save()
+        return redirect('etudiants')
+    return render(request, 'editetudiant.html', {'etudiant': etudiant, 'form': form})

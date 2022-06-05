@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
+</form>
+
+
+{% endblock %}

@@ -14,4 +14,5 @@ urlpatterns = [
     path('affichenote/<int:id>/', views.affichenote, name='affichenote'),
     path('', views.index, name='index'),
     path('recherche/', views.recherche, name='recherche'),
+    path('editetudiant/<etudiant_id>/', views.editetudiant, name='editetudiant'),
 ]

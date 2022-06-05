@@ -37,7 +37,8 @@
                     <span class="member-degignation">E-mail :<strong> {{etudiant.email}} </strong></span> <br>
                     <span class="member-degignation">Groupe :<strong> RT{{etudiant.groupe}} </strong></span>
                     <br/>
-                    <a href="{% url 'affichenote' etudiant.id %}">Voir les notes</a>
+                    <a href="{% url 'affichenote' etudiant.id %}">Voir les notes</a> - 
+                    <a href="{% url 'editetudiant' etudiant.id %}">Modifier</a> 
                   </div>
                 </div>
               </div>
