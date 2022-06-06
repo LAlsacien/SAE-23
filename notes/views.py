@@ -129,8 +129,13 @@ def recherche(request):
 
 def editetudiant(request, etudiant_id):
     etudiant = Etudiants.objects.get(pk=etudiant_id)
-    form = EtudiantsForm(request.POST or None, instance=etudiant)
+    form = EtudiantsForm(request.POST or None, request.FILES or None, instance=etudiant)
     if form.is_valid():
         form.save()
         return redirect('etudiants')
     return render(request, 'editetudiant.html', {'etudiant': etudiant, 'form': form})
+
+def suppretudiant(request, etudiant_id):
+    etudiant = models.Etudiants.objects.get(pk=etudiant_id)
+    etudiant.delete()
+    return redirect('etudiants')
