@@ -3,15 +3,13 @@
   <link
     rel="stylesheet"
     type="text/css"
-    href="{% static '/css/etudiantss.css' %}"
+    href="{% static '/css/recherche.css' %}"
   />
 </head>
 
 
 
 {% if rechercher %}
-    
-
     <div class="card-body">
         <div class="basis-member staff">
           <div class="container">
@@ -38,7 +36,8 @@
                     <span class="member-degignation">Groupe :<strong> RT{{etudiant.groupe}} </strong></span>
                     <br/>
                     <a href="{% url 'affichenote' etudiant.id %}">Voir les notes</a> - 
-                    <a href="{% url 'editetudiant' etudiant.id %}">Modifier</a> 
+                    <a href="{% url 'editetudiant' etudiant.id %}">Modifier</a> -
+                    <a href="{% url 'suppretudiant' etudiant.id %}">Supprimer</a> 
                   </div>
                 </div>
               </div>
