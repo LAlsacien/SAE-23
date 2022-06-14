@@ -1,8 +1,35 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
-    <form class="quest" method="post" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
-    </form>
+<head>
+    <link rel="stylesheet" href="{% static '/css/ajoutexamen.css' %}" >
+</head>
+<div class="tout">
+    <div class="row">
+        <div class="form-group col-sm-6">
+        {{form.etudiant|as_crispy_field}}
+        <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="form-group col-sm-6">
+        {{form.examens|as_crispy_field}}
+        <div id="emailHelp" class="form-text"></div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+        {{form.note|as_crispy_field}}
+        <div id="emailHelp" class="form-text"></div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+        {{form.appreciation|as_crispy_field}}
+        <div id="emailHelp" class="form-text"></div>
+        </div>
+    </div>
+        
+            <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
+        </form>
+</div>
 {% endblock %}

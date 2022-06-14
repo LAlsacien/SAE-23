@@ -16,7 +16,7 @@ class EtudiantsForm(ModelForm):
                 'photo',
                 'email',
                 )
-            labels = {"numeroetudiant":"Numéro étudiant"}
+            labels = {"numeroetudiant":"Numéro étudiant :", "nom":"Nom :", "prenom":"Prénom :", "groupe":"Groupe :", "photo":"Photo :", "email":"E-mail :"}
 
 
 class NotesForm(ModelForm):
