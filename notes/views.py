@@ -8,6 +8,9 @@ from .forms import EnseignantsForm
 from .forms import RessourcesueForm
 from .models import Etudiants, Notes, Ue, Examens, Ressourcesue, Enseignants
 from . import models 
+from django.http import FileResponse
+import io 
+
 
 
 
@@ -180,3 +183,46 @@ def supprue(request, ue_id):
     ue = models.Ue.objects.get(pk=ue_id)
     ue.delete()
     return redirect('ue')
+
+# def notepdf(request, notes_id):
+#     notes = Notes.objects.get(pk=notes_id)
+#     response = HttpResponse(content_type='application/pdf')
+#     response['Content-Disposition'] = 'attachment; filename="notes.pdf"'
+#     p = canvas.Canvas(response)
+#     p.setFont("Helvetica", 20)
+#     p.drawString(100, 800, "Notes")
+#     p.setFont("Helvetica", 15)
+#     p.drawString(100, 750, "Nom etudiant : " + notes.etudiant.nom)
+#     p.drawString(100, 725, "Prenom etudiant : " + notes.etudiant.prenom)
+#     p.drawString(100, 700, "Note 1 : " + str(notes.note1))
+#     p.drawString(100, 675, "Note 2 : " + str(notes.note2))
+#     p.drawString(100, 650, "Note 3 : " + str(notes.note3))
+#     p.drawString(100, 625, "Note 4 : " + str(notes.note4))
+#     p.drawString(100, 600, "Note 5 : " + str(notes.note5))
+#     p.drawString(100, 575, "Moyenne : " + str(notes.moyenne))
+#     p.drawString(100, 550, "Note finale : " + str(notes.note_finale))
+#     p.drawString(100, 525, "Mention : " + notes.mention)
+#     p.save()
+#     return response
+
+# def notepdf(request):
+#     buf = io.BytesIO()
+#     c = canvas.Canvas(buf, pagesizes=letter, bottomup=0)
+#     textob = c.beginText()
+#     textob.setTextOrigin(inch, inch)
+#     textob.setFont("Helvetica", 14)
+#     lines = [
+#         "This is line 1",
+#         "This is line 2",
+#         "This is line 3",
+#     ]
+
+#     for line in lines:
+#         textob.textLine(line)
+
+#     c.drawText(textob)
+#     c.showPage()
+#     c.save()
+#     buf.seek(0)
+
+#     return FileResponse(buf, as_attachment=True, filename='notes.pdf')
