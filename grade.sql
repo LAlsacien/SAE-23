@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: grade
--- Generation Time: 2022-06-10 14:38:08.5630
+-- Generation Time: 2022-06-16 11:24:30.8060
 -- -------------------------------------------------------------
 
 
@@ -130,7 +130,7 @@ CREATE TABLE `enseignants` (
   `nom` varchar(255) DEFAULT NULL,
   `prenom` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `etudiants` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -141,7 +141,7 @@ CREATE TABLE `etudiants` (
   `photo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `examens` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -149,7 +149,7 @@ CREATE TABLE `examens` (
   `date` date DEFAULT NULL,
   `coefficient` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `notes` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -162,7 +162,7 @@ CREATE TABLE `notes` (
   KEY `examens` (`examens`),
   CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`etudiant`) REFERENCES `etudiants` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `notes_ibfk_2` FOREIGN KEY (`examens`) REFERENCES `examens` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `ressourcesUe` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -173,7 +173,7 @@ CREATE TABLE `ressourcesUe` (
   PRIMARY KEY (`id`),
   KEY `nom` (`nom`),
   CONSTRAINT `ressourcesue_ibfk_1` FOREIGN KEY (`nom`) REFERENCES `ue` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `ue` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -182,7 +182,7 @@ CREATE TABLE `ue` (
   `semestre` int DEFAULT NULL,
   `ects` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALUES
 (1, 'Can add log entry', 1, 'add_logentry'),
@@ -365,31 +365,80 @@ INSERT INTO `enseignants` (`id`, `nom`, `prenom`) VALUES
 (1, 'Arnaud', 'Albert');
 
 INSERT INTO `etudiants` (`id`, `numeroEtudiant`, `nom`, `prenom`, `groupe`, `photo`, `email`) VALUES
-(1, 228982, 'Baumgaertner', 'Martin', 111, 'images/image1.png', 'martin.bmgtnr@gmail.com'),
-(11, 1113, 'Karapetyan', 'Mikhail', 112, 'images/A7404866.JPG', 'mikhail.karapetyan@uha.fr'),
-(12, 1625, 'Bloul', 'Fayçal', 111, 'images/image1_JP9CUzc.png', 'faycal.bloul@uha.fr'),
-(14, 182762, 'Gacougnolle', 'Titouan', 111, 'images/Untitled_design.png', 'titouan.gacougnolle@uha.fr'),
-(18, 6547, 'Mohareb', 'Yassem', 111, 'images/A7404876.JPG', 'yassem.mohareb@uha.fr');
+(21, 100, 'Antony', 'Baptiste', 12, 'images/pdp.png', 'antony.baptiste@uha.fr'),
+(22, 100, 'Aureli', 'Massimo', 12, 'images/pdp_N7RT8Vx.png', 'massimo.aureli@uha.fr'),
+(23, 100, 'Batjari', 'Elmir', 12, 'images/pdp_8dxyVHE.png', 'elmir.batajri@uha.fr'),
+(24, 100, 'Baumgaertner', 'Martin', 11, 'images/pdp_CcwiEoY.png', 'martin.baum@uha.fr'),
+(25, 100, 'Beavy', 'Elise', 11, 'images/pdp_lJ6RrBg.png', 'elise.beauvy@uha.fr'),
+(26, 100, 'Bengah', 'Tareq', 11, 'images/pdp_yQOGYPN.png', 'tareq.bengah@uha.fr'),
+(27, 100, 'Bilger', 'Thomas', 11, 'images/pdp_MFuUjrP.png', 'thomas.bilger@uha.fr'),
+(28, 100, 'Bloub', 'Fayçal', 11, 'images/pdp_eOQt9lh.png', 'faycal.bloul@uha.fr'),
+(29, 11, 'Boudama', 'Bahir', 13, 'images/pdp_vsyCbeM.png', 'bahir.boudama@uha.fr'),
+(30, 100, 'Brutshy', 'Jules', 11, 'images/pdp_yUj79cX.png', 'jules.brutshy@uha.fr'),
+(31, 100, 'Cazal', 'Réné', 12, 'images/pdp_pJwTZK6.png', 'rene.cazal@uha.fr'),
+(32, 100, 'Chaboisseau', 'Enzo', 12, 'images/pdp_aLKePvI.png', 'enzo.chaboisseau@uha.fr'),
+(33, 100, 'Chevalier', 'Hugo', 11, 'images/pdp_EryUdOj.png', 'hugo.chevalier@uha.fr'),
+(34, 100, 'Claudel', 'Louis', 12, 'images/pdp_TCmyshw.png', 'louis.claudel@uha.fr'),
+(35, 100, 'Cristel', 'Emeline', 11, 'images/pdp_4WewXww.png', 'emeline.cristel@uha.fr'),
+(36, 100, 'Cuney', 'Matteo', 12, 'images/pdp_PhCq3go.png', 'matteo.cuney@uha.fr'),
+(37, 100, 'Daoudi', 'Khalil', 12, 'images/pdp_zXaWYJm.png', 'khalil.daoudi@uha.fr'),
+(38, 100, 'Demirbag', 'Daniel', 13, 'images/pdp_vttPREU.png', 'daniel.demirbag@uha.fr'),
+(39, 100, 'Descamps', 'Nathan', 13, 'images/pdp_CPw6KV6.png', 'nathan.descamps@uha.fr'),
+(40, 100, 'Descieux', 'Esteban', 11, 'images/pdp_FE6s9L4.png', 'esteban.descieux@uha.fr'),
+(41, 100, 'Desvernois', 'Louis', 11, 'images/pdp_coddGol.png', 'louis.devernois@uha.fr'),
+(42, 100, 'Dib', 'Rayane', 11, 'images/pdp_AzXFmML.png', 'rayane.dib@uha.fr'),
+(43, 100, 'Doghmane', 'Saji', 11, 'images/pdp_JgnPEyM.png', 'saji.doghman@uha.fr'),
+(44, 100, 'Dubois', 'Phillipe', 11, 'images/pdp_xrcZ3iB.png', 'phillipe.dubois@uha.fr'),
+(45, 100, 'Edel-Viaux', 'Thomas', 12, 'images/pdp_dcN6j91.png', 'thomas.edel-viaux@uha.fr'),
+(46, 100, 'Egly', 'Lucas', 11, 'images/pdp_6WyW00I.png', 'lucas.egly@uha.fr'),
+(47, 100, 'Eraslan', 'Emir', 12, 'images/pdp_rWyfnRs.png', 'emir.eraslan@uha.fr'),
+(48, 100, 'Firzan', 'Zava', 13, 'images/pdp_8lx2I3Q.png', 'zava.firzan@uha.fr'),
+(49, 100, 'Gacougnolle', 'Titouan', 12, 'images/pdp_LS0znXq.png', 'titouan.gacoug@uha.fr'),
+(50, 100, 'Gander', 'Nathan', 13, 'images/pdp_8Dj4oSA.png', 'nathan.descamps@uha.fr'),
+(51, 100, 'Gasser', 'Stephane', 12, 'images/pdp_jYEBxq9.png', 'stephane.gaser@uha.fr'),
+(52, 100, 'Grenot', 'Sarah', 11, 'images/pdp_DzTR8jf.png', 'sarah.grenot@uha.f'),
+(53, 100, 'Guilhot', 'Emilie', 12, 'images/pdp_3TubYQJ.png', 'emilie.guilhot@uha.fr'),
+(54, 100, 'Halbout', 'Ernest', 13, 'images/pdp_9IzKsp8.png', 'ernest.halbout@uha.fr'),
+(55, 100, 'Hertrich', 'William', 12, 'images/pdp_dYamTBm.png', 'william.hertrich@uha.fr'),
+(56, 100, 'Jacob', 'Louis', 12, 'images/pdp_b3MtjnD.png', 'louis.jacob@uha.fr'),
+(57, 100, 'Karapetyan', 'Mikhail', 12, 'images/pdp_3RbwpBe.png', 'mikhail.karapetyan@uha.fr'),
+(58, 100, 'Kayser', 'Nicolas', 13, 'images/pdp_NyQmEJc.png', 'nicolas.kayser@uha.fr'),
+(59, 100, 'Lamine', 'Elias', 12, 'images/pdp_BOSIOSe.png', 'elias.lamine@uha.fr'),
+(60, 100, 'Lamontagne', 'Olivier', 12, 'images/pdp_fsBdkBO.png', 'olivier.lamontagnz@uha?fr'),
+(61, 100, 'Landeau', 'Charles', 12, 'images/pdp_HoPV5qU.png', 'charles.landeau@uha.fr'),
+(62, 100, 'Long', 'Valentin', 12, 'images/pdp_RPVWirL.png', 'valentin.long@uha.fr'),
+(63, 100, 'Losser', 'Julien', 12, 'images/pdp_AYJ0Q8Y.png', 'julien.losser@uha.fr'),
+(64, 100, 'Magnan', 'Anthony', 12, 'images/pdp_3f1d5Cl.png', 'anthony.magnan@uha.fr'),
+(65, 100, 'Maitre', 'Gregory', 13, 'images/pdp_uNaqnER.png', 'gregory.maitre@uha.fr'),
+(66, 100, 'Mohareb', 'Yassem', 11, 'images/pdp_9iBSMxK.png', 'yassem.mohareb@uha.fr'),
+(67, 100, 'Monchaux', 'Jade', 11, 'images/pdp_Ge1SMPB.png', 'jade.monchaux@uha.fr'),
+(68, 100, 'Pacorel', 'Francesco', 13, 'images/pdp_C6v7aqj.png', 'francesco.pacorel@uha.fr'),
+(69, 100, 'Pluviose', 'Louis', 13, 'images/pdp_OhM37pP.png', 'louis.pluviose@uha.fr'),
+(70, 100, 'Prevost', 'Mathieu', 12, 'images/pdp_uvj5Svs.png', 'mathieu.prevost@uha.fr'),
+(71, 100, 'Rashiti', 'Shpend', 12, 'images/pdp_g6pinSw.png', 'shpend.rashiti@uha.fr'),
+(72, 100, 'Rehm', 'Mehdi', 12, 'images/pdp_Bqo0ZjD.png', 'mehdi.rehm@uha.fr'),
+(73, 100, 'Romeo', 'Raphael', 13, 'images/pdp_BZrMJ2m.png', 'raphael.romeo@uha.fr'),
+(74, 100, 'Scheider', 'Candice', 11, 'images/pdp_rmv5yq7.png', 'candice.shneider@uha.fr'),
+(75, 100, 'Schoenn', 'Alexis', 13, 'images/pdp_Mjm9hj7.png', 'alexis.schoenn@uha.fr'),
+(76, 100, 'Schrenck', 'Tiphaine', 11, 'images/pdp_9nJYBws.png', 'tiphaine.schrenk@uha.fr'),
+(77, 100, 'Sembe', 'Jomath', 12, 'images/pdp_jvzrjcI.png', 'jomath.sembe@uha.fr'),
+(78, 100, 'Strub', 'Thomas', 13, 'images/pdp_Aa1k0JP.png', 'thomas.strub@uha.fr'),
+(79, 100, 'Tefang', 'Ivan', 13, 'images/pdp_MLdrtR1.png', 'ivan.tefang@uha.fr'),
+(80, 100, 'Chollier', 'Liam', 11, 'images/pdp_Hi51xfE.png', 'liam.thomas@uha.fr'),
+(81, 100, 'Uetwiller', 'Victor', 11, 'images/pdp_DUYSvYA.png', 'victor.uetwiller@uha.fr'),
+(82, 100, 'Wagner', 'Nicolas', 11, 'images/pdp_CbTzB3n.png', 'nicolas.wagner@uha.fr'),
+(83, 100, 'Weber', 'Julien', 12, 'images/pdp_2BglTGm.png', 'julien.weber@uha.fr'),
+(84, 100, 'Zenner', 'Noe', 12, 'images/pdp_plVx6lE.png', 'noe.zenner@uha.fr');
 
 INSERT INTO `examens` (`id`, `titre`, `date`, `coefficient`) VALUES
-(1, 'maths', '2022-05-27', 4),
-(2, 'Programmation web', '2022-06-20', 9);
+(3, 'R214 - Mathématiques des sytèmes numériques', '2022-05-12', 7),
+(4, 'SAE 23 - Mettre en place une solution informatique pour l\'entreprise', '2022-06-17', 20);
 
 INSERT INTO `notes` (`id`, `examens`, `etudiant`, `note`, `appreciation`) VALUES
-(1, 1, 1, 12, 'pas ouf'),
-(4, 1, 1, 10, 'nul'),
-(6, 1, 1, 20, 'ouais ouais ouais'),
-(14, 2, 11, 19, 'Plutot bien'),
-(15, 2, 1, 20, 'TB'),
-(16, 2, 12, 15, 'pas ouf'),
-(18, 2, 14, 20, 'top'),
-(19, 2, 18, 0, 'nul');
-
-INSERT INTO `ressourcesUe` (`id`, `codeRessource`, `nom`, `descriptif`, `coefficient`) VALUES
-(1, 12, 1, 'AC12', 3);
+(35, 4, 57, 20, 'Bravo');
 
 INSERT INTO `ue` (`id`, `code`, `nom`, `semestre`, `ects`) VALUES
-(1, 1, 'UE1', 1, 12);
+(2, 1, 'UE1', 1, 29);
 
 
 
