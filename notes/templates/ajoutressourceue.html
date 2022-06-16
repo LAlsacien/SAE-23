@@ -1,8 +1,41 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static '/css/ressourceue.css' %}" >
+</head>
+<div class="main">
     <form class="quest" method="post" action="">
         {% csrf_token %}
-        {{form.as_p}}
+        <div class="form-row">
+            <div class="form-group">
+            {{form.coderessource|as_crispy_field}}
+            <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            {{form.ue|as_crispy_field}}
+            <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            {{form.descriptif|as_crispy_field}}
+            <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            {{form.coefficient|as_crispy_field}}
+            <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <br>
         <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
+        <br>
+        <a href="{% url 'ressourceue' %}">voir toutes les ressources</a>
     </form>
+</div>
 {% endblock %}

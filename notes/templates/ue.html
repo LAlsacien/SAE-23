@@ -17,22 +17,22 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Nom</th>
-        <th scope="col">Prénom</th>
+        <th scope="col">Nom :</th>
+        <th scope="col">Nombre d'ECTS :</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        {% for enseignants in enseignants %}
-        <td>{{enseignants.nom}}</td>
-        <td>{{enseignants.prenom}}
-            <a class="suppr" href="{% url 'supprenseignants' enseignants.id %}">Supprimer</a> 
-        </td>
+        {% for ue in ue %}
+        <td>{{ue.nom}}</td>
+        <td>{{ue.ects}}
+            <a class="suppr" href="{% url 'supprue' ue.id %}">Supprimer</a> 
+        </td> 
       </tr>
       {% endfor %}
     </tbody>
   </table>
-  <a href="{% url 'ajoutenseignant' %}">Ajouter un enseignant</a>
+  <a href="{% url 'ajoutue' %}">Ajouter une UE</a>
 </div>
 
 {% endblock %}

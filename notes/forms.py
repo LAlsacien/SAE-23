@@ -65,3 +65,4 @@ class RessourcesueForm(ModelForm):
                 'descriptif',
                 'coefficient',
             )
+            labels = {"coderessource":"Code de la ressource :", "ue":"UE à laquelle la ressource appartient:", "descriptif":"Nom complet :"}

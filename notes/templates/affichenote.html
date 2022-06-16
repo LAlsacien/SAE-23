@@ -4,7 +4,7 @@
   <link
     rel="stylesheet"
     type="text/css"
-    href="{% static '/css/affichee.css' %}"
+    href="{% static '/css/afficheee.css' %}"
   />
 </head>
 
@@ -28,7 +28,9 @@
       <tr>
         {% for notes in notes %}
         <td>{{notes.examens}}</td>
-        <td>{{notes.note}}/20  </td> 
+        <td>{{notes.note}}/20
+          <a class="suppr" href="{% url 'supprnotes' notes.id %}">Supprimer</a> 
+        </td> 
       </tr>
       {% endfor %}
     </tbody>

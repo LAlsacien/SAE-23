@@ -140,10 +140,10 @@ def suppretudiant(request, etudiant_id):
     etudiant.delete()
     return redirect('etudiants')
 
-def supprnote(request, note_id):
-    note = models.Notes.objects.get(pk=note_id)
-    note.delete()
-    return redirect('notes')
+def supprnotes(request, notes_id):
+    notes = models.Notes.objects.get(pk=notes_id)
+    notes.delete()
+    return redirect('etudiants')
 
 def examens(request):
     examens = Examens.objects.all()
@@ -162,3 +162,21 @@ def supprenseignants(request, enseignants_id):
     enseignants = models.Enseignants.objects.get(pk=enseignants_id)
     enseignants.delete()
     return redirect('enseignants')
+
+def ressourceue(request):
+    ressourceue = Ressourcesue.objects.all()
+    return render(request, 'ressourceue.html', {'ressourceue': ressourceue})
+
+def supprressourceue(request, ressourceue_id):
+    ressourceue = models.Ressourcesue.objects.get(pk=ressourceue_id)
+    ressourceue.delete()
+    return redirect('ressourceue')
+
+def ue(request):
+    ue = Ue.objects.all()
+    return render(request, 'ue.html', {'ue': ue})
+
+def supprue(request, ue_id):
+    ue = models.Ue.objects.get(pk=ue_id)
+    ue.delete()
+    return redirect('ue')

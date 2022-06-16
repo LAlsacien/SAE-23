@@ -1,8 +1,38 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static '/css/ajoutue.css' %}" >
+</head>
+<div class="main">
     <form class="quest" method="post" action="">
         {% csrf_token %}
-        {{form.as_p}}
+        <div class="row">
+            <div class="form-group col-sm-6">
+              {{form.code|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="form-group col-sm-6">
+              {{form.nom|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+              {{form.semestre|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="form-group col-sm-6">
+              {{form.ects|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+        <br>
         <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
+        <br>
+        <br>
+        <a href="{% url 'ue' %}">Voir toutes les UEs</a>
     </form>
+</div>
 {% endblock %}
