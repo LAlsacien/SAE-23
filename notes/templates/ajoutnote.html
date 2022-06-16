@@ -5,6 +5,8 @@
 <head>
     <link rel="stylesheet" href="{% static '/css/ajoutexamen.css' %}" >
 </head>
+<form class="quest" method="post" action="">
+    {% csrf_token %}
 <div class="tout">
     <div class="row">
         <div class="form-group col-sm-6">
@@ -28,8 +30,9 @@
         <div id="emailHelp" class="form-text"></div>
         </div>
     </div>
-        
-            <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
-        </form>
+    <center>
+        <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
+    </center>
+</form>
 </div>
 {% endblock %}

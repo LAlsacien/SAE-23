@@ -1,1 +1,23 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+<head>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '/css/home.css' %}"
+  />
+</head>
+<body>
+    <div class="main">
+        <h2 class="bien">Bienvenus sur WebGrade <i class="fa-solid fa-graduation-cap"></i></h2>
+        <h3>ajoutez dès maintenant votre première note</h3>
+        <div class="frame">
+            <a href="{% url 'ajoutnote' %}">
+            <button class="custom-btn btn-15">Ajouter</button>
+            </a>
+        </div> 
+</div>
+</body>
+
+{% endblock %}

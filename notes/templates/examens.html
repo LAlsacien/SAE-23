@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '/css/exam.css' %}"
+  />
+</head>
+
+<br />
+
+
+
+<div class="tout">
+  <br> <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Titre</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for examens in examens %}
+        <td>{{examens.titre}}</td>
+        <td>{{examens.date}}
+            <a class="suppr" href="{% url 'supprexamens' examens.id %}">Supprimer</a> 
+        </td> 
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

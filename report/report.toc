@@ -1,0 +1,4 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{2}{}%
+\contentsline {section}{\numberline {1.1}Création de la base de données}{2}{}%
+\contentsline {section}{\numberline {1.2}Import de la base de données dans Django}{3}{}%

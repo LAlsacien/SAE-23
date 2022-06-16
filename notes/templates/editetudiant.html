@@ -1,11 +1,46 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
-</form>
-
-
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/ajoutetudiants.css' %}" />
+</head>
+<div class="tout">
+    <form class="quest" method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="form-group col-sm-6">
+              {{form.nom|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="form-group col-sm-6">
+              {{form.prenom|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+        </div>
+          <div class="form-row">
+            <div class="form-group">
+              {{form.numeroetudiant|as_crispy_field}}
+              <div id="emailHelp" class="form-text">Le numéro étudiant se trouve sur la carte étudiant</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              {{form.groupe|as_crispy_field}}
+              <div id="emailHelp" class="form-text">Votre groupe de travail</div>
+            </div>
+          </div>
+          {{form.photo|as_crispy_field}}
+          <div class="form-row">
+            <div class="form-group">
+              {{form.email|as_crispy_field}}
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+          </div>
+          <div>
+        <center>
+            <input id="butt" class=" btn btn-primary" type="submit" value="Envoyer les données"\>
+        </center>
+    </form>
+</div>
 {% endblock %}

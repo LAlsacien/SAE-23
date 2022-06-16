@@ -166,7 +166,7 @@ class Examens(models.Model):
 class Notes(models.Model):
     examens = models.ForeignKey(Examens, models.DO_NOTHING, db_column='examens', blank=True, null=True)
     etudiant = models.ForeignKey(Etudiants, models.DO_NOTHING, db_column='etudiant', blank=True, null=True)
-    note = models.BigIntegerField(blank=True, null=True)
+    note = models.BigIntegerField(blank=False, null=False)
     appreciation = models.TextField(blank=True, null=True)
 
     class Meta:

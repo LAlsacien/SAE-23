@@ -16,4 +16,9 @@ urlpatterns = [
     path('recherche/', views.recherche, name='recherche'),
     path('editetudiant/<etudiant_id>/', views.editetudiant, name='editetudiant'),
     path('suppretudiant/<etudiant_id>/', views.suppretudiant, name='suppretudiant'),
+    path('supprnote/<note_id>/', views.supprnote, name='supprnote'),
+    path('examens/', views.examens, name='examens'),
+    path('supprexamens/<examens_id>/', views.supprexamens, name='supprexamens'),
+    path('enseignants/', views.enseignants, name='enseignants'),
+    path('supprenseignants/<enseignants_id>/', views.supprenseignants, name='supprenseignants'),
 ]
