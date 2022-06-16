@@ -14,6 +14,7 @@ import io
 
 
 
+
 def index(request):
     return render(request, 'index.html')
 

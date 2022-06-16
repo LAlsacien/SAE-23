@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{            }\PYG{n}{mysql}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{u}\PYG{+w}{ }\PYG{n}{root}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{p}\PYG{+w}{ }\PYG{n}{grade}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{grade}\PYG{p}{.}\PYG{k}{sql}
+\PYG{+w}{        }\PYG{err}{\PYGZbs{}}\PYG{k}{end}\PYG{err}{\PYGZob{}}\PYG{n}{lstlisting}\PYG{err}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{err}{\PYGZbs{}}\PYG{n}{subsection}\PYG{err}{\PYGZob{}}\PYG{n}{Modification}\PYG{+w}{ }\PYG{n}{du}\PYG{+w}{ }\PYG{n}{fichier}\PYG{+w}{ }\PYG{n}{settings}\PYG{p}{.}\PYG{n}{py}\PYG{err}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{err}{\PYGZbs{}}\PYG{n}{subsubsection}\PYG{err}{\PYGZob{}}\PYG{n}{Adresse}\PYG{+w}{ }\PYG{n}{IP}\PYG{err}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n}{J}\PYG{err}{’}\PYG{n}{ai}\PYG{+w}{ }\PYG{n}{modifié}\PYG{+w}{ }\PYG{n}{certains}\PYG{+w}{ }\PYG{n}{champs}\PYG{+w}{ }\PYG{n}{du}\PYG{+w}{ }\PYG{n}{fichier}\PYG{+w}{ }\PYG{n}{settings}\PYG{+w}{ }\PYG{n}{du}\PYG{+w}{ }\PYG{n}{projet}\PYG{+w}{ }\PYG{n}{pour}\PYG{+w}{ }\PYG{n}{que}\PYG{+w}{ }\PYG{n}{tout}\PYG{+w}{ }\PYG{n}{fonctionne}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{premièrement}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{cette}\PYG{+w}{ }\PYG{n}{ligne}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dans}\PYG{+w}{ }\PYG{n}{laquelle}\PYG{+w}{ }\PYG{n}{j}\PYG{err}{’}\PYG{n}{ai}\PYG{+w}{ }\PYG{n}{ajouté}\PYG{+w}{ }\PYG{n}{mon}\PYG{+w}{ }\PYG{n}{adresse}\PYG{+w}{ }\PYG{n}{IP}\PYG{+w}{ }\PYG{p}{:}
+\PYG{+w}{            }\PYG{err}{\PYGZbs{}}\PYG{k}{begin}\PYG{err}{\PYGZob{}}\PYG{n}{lstlisting}\PYG{err}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n}{ALLOWED\PYGZus{}HOSTS}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}192.168.64.6]}
+\PYG{l+s+s1}{            \PYGZbs{}end\PYGZob{}lstlisting\PYGZcb{}}
+\PYG{l+s+s1}{            \PYGZbs{}subsubsection\PYGZob{}Base de données\PYGZcb{}}
+\PYG{l+s+s1}{            Pour pouvoir mettre en place la base de données avec le projet j’ai dû me connecter à la base de données que j’ai créée avec MariaDB, pour ce faire j’ai créé un utilisateur depuis MariaDB, et je lui ai donnée tous les droits, à l’aide des commandes suivantes :}
+\PYG{l+s+s1}{            \PYGZbs{}begin\PYGZob{}listing\PYGZcb{}[H]}
+\PYG{l+s+s1}{                \PYGZbs{}caption\PYGZob{}code sql\PYGZcb{}}
+\PYG{l+s+s1}{                \PYGZbs{}label\PYGZob{}lst:sql\PYGZcb{}}
+\PYG{l+s+s1}{                \PYGZbs{}begin\PYGZob{}minted\PYGZcb{}\PYGZob{}sql\PYGZcb{}}
+\PYG{l+s+s1}{                    CREATE USER \PYGZsq{}}\PYG{n}{django}\PYG{l+s+s1}{\PYGZsq{}@\PYGZsq{}}\PYG{n}{localhost}\PYG{l+s+s1}{\PYGZsq{} IDENTIFIED BY \PYGZsq{}}\PYG{n}{django}\PYG{o}{\PYGZhy{}}\PYG{k}{user}\PYG{o}{\PYGZhy{}}\PYG{n}{password}\PYG{l+s+s1}{\PYGZsq{};}
+\PYG{l+s+s1}{                    GRANT ALL PRIVILEGES ON grade.* TO  \PYGZsq{}}\PYG{n}{django}\PYG{l+s+s1}{\PYGZsq{}@\PYGZsq{}}\PYG{n}{localhost}\PYG{err}{\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

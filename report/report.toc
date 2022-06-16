@@ -1,4 +1,18 @@
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{2}{}%
-\contentsline {section}{\numberline {1.1}Création de la base de données}{2}{}%
-\contentsline {section}{\numberline {1.2}Import de la base de données dans Django}{3}{}%
+\contentsline {section}{\numberline {1}Introduction}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Création de la base de données}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Import de la base de données dans Django}{4}{}%
+\contentsline {section}{\numberline {2}Développement Backend}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Gestion des CRUDs}{5}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Démarrage de la création des CRUDs}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Fonction recherche étudiant}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Views.py}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}html}{7}{}%
+\contentsline {section}{\numberline {3}Mise en place de notre application sur serveur linux}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Configuration de la machine}{7}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Installation de base}{7}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Création de l'environnement virtuelle}{8}{}%
+\contentsline {subsection}{\numberline {3.2}Mise en place de la base de données}{8}{}%
+\contentsline {subsection}{\numberline {3.3}Modification du fichier settings.py}{8}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Adresse IP}{8}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Base de données}{8}{}%

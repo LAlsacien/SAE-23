@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+            \PYG{n}{STATIC\PYGZus{}URL} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}/static/\PYGZsq{}}
+            \PYG{n}{MEDIA\PYGZus{}URL} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}/media/\PYGZsq{}}
+
+            \PYG{n}{MEDIA\PYGZus{}ROOT} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{BASE\PYGZus{}DIR}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}media/\PYGZsq{}}\PYG{p}{)}
+
+            \PYG{n}{STATICFILES\PYGZus{}DIRS} \PYG{o}{=} \PYG{p}{(}
+                \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{BASE\PYGZus{}DIR}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}static\PYGZsq{}}\PYG{p}{),}
+            \PYG{p}{)}
+\end{Verbatim}
