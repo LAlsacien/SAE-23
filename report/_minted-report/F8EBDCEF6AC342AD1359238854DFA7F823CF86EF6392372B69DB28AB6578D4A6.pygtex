@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+                    \PYG{n}{ALLOWED\PYGZus{}HOSTS} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}192.168.64.6\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{                }\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{USER}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}django\PYGZsq{}}\PYG{o}{@}\PYG{l+s+s1}{\PYGZsq{}localhost\PYGZsq{}}\PYG{+w}{ }\PYG{n}{IDENTIFIED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{                }\PYG{k}{GRANT}\PYG{+w}{ }\PYG{k}{ALL}\PYG{+w}{ }\PYG{k}{PRIVILEGES}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{grade}\PYG{p}{.}\PYG{o}{*}\PYG{+w}{ }\PYG{k}{TO}\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}django\PYGZsq{}}\PYG{o}{@}\PYG{l+s+s1}{\PYGZsq{}localhost\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}
