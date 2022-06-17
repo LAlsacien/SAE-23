@@ -17,6 +17,7 @@ class EtudiantsForm(ModelForm):
                 'email',
                 )
             labels = {"numeroetudiant":"Numéro étudiant :", "nom":"Nom :", "prenom":"Prénom :", "groupe":"Groupe :", "photo":"Photo :", "email":"E-mail :"}
+            widgets = {'photo': forms.FileInput(attrs={'class': 'form-control'}),}
 
 
 class NotesForm(ModelForm):
