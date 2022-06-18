@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n+nv}{ALLOWED\PYGZus{}HOSTS} \PYG{o}{=} \PYG{o}{[}\PYG{l+s+s1}{\PYGZsq{}webgrade.localhost\PYGZsq{}}\PYG{o}{]}
+        \PYG{n+nv}{STATIC\PYGZus{}ROOT} \PYG{o}{=} os.path.join\PYG{o}{(}BASE\PYGZus{}DIR, \PYG{l+s+s2}{\PYGZdq{}static/\PYGZdq{}}\PYG{o}{)}
+\end{Verbatim}

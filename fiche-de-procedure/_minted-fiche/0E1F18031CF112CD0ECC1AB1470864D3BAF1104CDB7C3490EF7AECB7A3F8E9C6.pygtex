@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        sudo a2ensite webgrade.conf
+
+        service apache2 reload
+\end{Verbatim}

@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        sudo nano /etc/apache2/sites\PYGZhy{}available/webgrade.conf
+
+        \PYGZlt{}VirtualHost *:80\PYGZgt{}
+            ServerAdmin admin@webgrade.localhost
+            ServerName webgrade.localhost
+            ServerAlias www.webgrade.localhost
+            DocumentRoot /home/martin/SAE\PYGZhy{}23
+            ErrorLog \PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{APACHE\PYGZus{}LOG\PYGZus{}DIR}\PYG{l+s+si}{\PYGZcb{}}/error.log
+            CustomLog \PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{APACHE\PYGZus{}LOG\PYGZus{}DIR}\PYG{l+s+si}{\PYGZcb{}}/access.log combined
+
+            Alias /static /home/martin/SAE\PYGZhy{}23/static
+            \PYGZlt{}Directory /home/martin/SAE\PYGZhy{}23/static\PYGZgt{}
+                Require all granted
+            \PYGZlt{}/Directory\PYGZgt{}
+
+            Alias /static /home/martin/SAE\PYGZhy{}23/media
+            \PYGZlt{}Directory /home/martin/SAE\PYGZhy{}23/media\PYGZgt{}
+                Require all granted
+            \PYGZlt{}/Directory\PYGZgt{}
+
+            \PYGZlt{}Directory /home/martin/SAE\PYGZhy{}23/webgrade\PYGZgt{}
+                \PYGZlt{}Files wsgi.py\PYGZgt{}
+                    Require all granted
+                \PYGZlt{}/Files\PYGZgt{}
+            \PYGZlt{}/Directory\PYGZgt{}
+
+            WSGIDaemonProcess SAE\PYGZhy{}23 python\PYGZhy{}path\PYG{o}{=}/home/martin/SAE\PYGZhy{}23
+            python\PYGZhy{}home\PYG{o}{=}/home/martin/SAE\PYGZhy{}23/env
+            WSGIProcessGroup SAE\PYGZhy{}23
+            WSGIScriptAlias / /home/martin/SAE\PYGZhy{}23/webgrade/wsgi.py
+        \PYGZlt{}/VirtualHost\PYGZgt{}
+\end{Verbatim}

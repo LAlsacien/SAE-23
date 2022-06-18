@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        sudo apt install python3\PYGZhy{}venv
+        python3 \PYGZhy{}m venv venv
+        \PYG{n+nb}{source} venv/bin/activate
+        pip3 install \PYGZhy{}r requirements.txt
+\end{Verbatim}
