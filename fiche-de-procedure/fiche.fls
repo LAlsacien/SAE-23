@@ -741,6 +741,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
