@@ -10,7 +10,18 @@
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \setcellgapes{1pt}
 \makegapedcells
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\chead{}
+\rfoot{\thepage}
+\lfoot{Martin Baumgaertner}
+\cfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\listingscaption}{Code}
+\renewcommand{\listoflistingscaption}{Table des codes}
 
 \begin{document}
 \begin{titlepage}
@@ -38,6 +49,8 @@
  \end{titlepage}
  \newpage
  \tableofcontents
+ \listoflistings
+ 
  \newpage
  \section{Introduction}
     \subsection{Configuration de la machine}

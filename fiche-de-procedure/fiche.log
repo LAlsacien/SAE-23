@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.15)  19 JUN 2022 09:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.15)  19 JUN 2022 16:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -382,6 +382,17 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip58
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip59
+\f@nch@O@elh=\skip60
+\f@nch@O@erh=\skip61
+\f@nch@O@olh=\skip62
+\f@nch@O@orh=\skip63
+\f@nch@O@elf=\skip64
+\f@nch@O@erf=\skip65
+\f@nch@O@olf=\skip66
+\f@nch@O@orf=\skip67
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -409,26 +420,26 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (./fiche.aux)
 \openout1 = `fiche.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Info: Redefining \degres on input line 15.
-LaTeX Info: Redefining \up on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Info: Redefining \degres on input line 26.
+LaTeX Info: Redefining \up on input line 26.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -489,7 +500,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 15.
+Package hyperref Info: Link coloring ON on input line 26.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -499,9 +510,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
  (./fiche.out) (./fiche.out)
 \@outlinefile=\write5
 \openout5 = `fiche.out'.
@@ -519,13 +530,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write6
 \openout6 = `fiche.toc'.
 
+ (./fiche.lol)
+\tf@lol=\write7
+\openout7 = `fiche.lol'.
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41  \newpage
+l.54  \newpage
                [1]
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 49.
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 62.
 \openout3 = `fiche.pyg'.
 
  (./_minted-fiche/default.pygstyle) (./_minted-fiche/A00C65037D19E2CDFDA2C4DE2506ADDDBAF1104CDB7C3490EF7AECB7A3F8E9C6.pygtex
@@ -567,10 +582,10 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 \openout3 = `fiche.pyg'.
 
  (./_minted-fiche/F0D921D8EBA6C5AD8D152BE08E5304CD1346936BDB1F8181160B84767C98D583.pygtex) [6]
-<webgrade.png, id=95, 1557.82pt x 930.47626pt>
+<webgrade.png, id=106, 1557.82pt x 930.47626pt>
 File: webgrade.png Graphic file (type png)
 <use webgrade.png>
-Package pdftex.def Info: webgrade.png  used on input line 210.
+Package pdftex.def Info: webgrade.png  used on input line 223.
 (pdftex.def)             Requested size: 418.25368pt x 249.81215pt.
  [7 <./webgrade.png>] (./fiche.aux)
 Package rerunfilecheck Info: File `fiche.out' has not changed.
@@ -579,18 +594,18 @@ runsystem(rm fiche.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17298 strings out of 478268
- 297132 string characters out of 5846347
- 642998 words of memory out of 5000000
- 35224 multiletter control sequences out of 15000+600000
+ 17480 strings out of 478268
+ 299724 string characters out of 5846347
+ 647953 words of memory out of 5000000
+ 35398 multiletter control sequences out of 15000+600000
  477908 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,81p,413b,661s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,81p,413b,661s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on fiche.pdf (8 pages, 693757 bytes).
+Output written on fiche.pdf (8 pages, 695028 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
