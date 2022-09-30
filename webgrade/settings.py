@@ -83,10 +83,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'grade', 
-        'USER': 'root',
-        'HOST': 'localhost',
+        'USER': 'martin',
+        'HOST': '10.211.55.5',
         'PORT': '3306',
-        'PASSWORD': 'webgradedatabase',
+        'PASSWORD': 'martin',
     }
 }
 
